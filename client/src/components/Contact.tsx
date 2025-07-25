@@ -24,9 +24,11 @@ export function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -36,7 +38,7 @@ export function Contact() {
     try {
       await apiRequest("POST", "/api/contact", formData);
       toast({
-        title: "Message sent successfully!",
+        title: "Please contact me via LinkedIn or email",
         description: "Thank you for reaching out. I'll get back to you soon.",
       });
       setFormData({ name: "", email: "", subject: "", message: "" });
@@ -64,7 +66,9 @@ export function Contact() {
               Get In Touch
             </span>
           </h2>
-          <p className="text-xl text-gray-300">Let's collaborate on exciting AI projects</p>
+          <p className="text-xl text-gray-300">
+            Let's collaborate on exciting AI projects
+          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">

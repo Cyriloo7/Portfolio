@@ -1,5 +1,6 @@
 import { ParticleBackground } from "./ParticleBackground";
 import { useTypewriter } from "../hooks/use-typewriter";
+import heroimg from "../assets/my-profile-img-2.jpg";
 
 export function Hero() {
   const typewriterText = useTypewriter({
@@ -17,16 +18,22 @@ export function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       {/* Particle Background */}
       <ParticleBackground />
 
       {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/50 to-blue-900/50" style={{ zIndex: 2 }} />
-      
+      <div
+        className="absolute inset-0 bg-gradient-to-r from-purple-900/50 to-blue-900/50"
+        style={{ zIndex: 2 }}
+      />
+
       {/* Background Image */}
       <img
-        src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080"
+        src="https://tse2.mm.bing.net/th/id/OIP.qSmTf5Qni6_L9l1cRpv35QHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
         alt="Modern AI technology workspace"
         className="absolute inset-0 w-full h-full object-cover opacity-20"
         style={{ zIndex: 0 }}
@@ -36,29 +43,42 @@ export function Hero() {
         <div className="glass rounded-3xl p-12 animate-float">
           {/* Profile Image */}
           <img
-            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
+            src={heroimg}
             alt="Professional developer"
             className="w-32 h-32 rounded-full mx-auto mb-8 border-4 border-primary shadow-2xl"
           />
 
-          <h1 className="text-6xl font-bold mb-6 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <h1
+            className="text-6xl font-bold mb-6 animate-fade-in-up"
+            style={{ animationDelay: "0.2s" }}
+          >
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Cyril Jose
             </span>
           </h1>
 
-          <div className="text-2xl mb-8 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+          <div
+            className="text-2xl mb-8 animate-fade-in-up"
+            style={{ animationDelay: "0.4s" }}
+          >
             <span className="text-gray-300">I'm a </span>
             <span className="typewriter text-primary font-semibold">
               {typewriterText}
             </span>
           </div>
 
-          <p className="text-xl text-gray-300 mb-12 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
-            Passionate about leveraging machine learning to solve real-world problems with experience in deep learning, NLP, and data analytics.
+          <p
+            className="text-xl text-gray-300 mb-12 animate-fade-in-up"
+            style={{ animationDelay: "0.6s" }}
+          >
+            Passionate about leveraging machine learning to solve real-world
+            problems with experience in deep learning, NLP, and data analytics.
           </p>
 
-          <div className="flex justify-center space-x-6 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
+          <div
+            className="flex justify-center space-x-6 animate-fade-in-up"
+            style={{ animationDelay: "0.8s" }}
+          >
             <a
               href="#contact"
               className="glow-button glass rounded-full px-8 py-4 text-white hover:bg-primary/20 transition-all ripple"
@@ -75,7 +95,10 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="flex justify-center space-x-8 mt-12 animate-fade-in-up" style={{ animationDelay: "1s" }}>
+          <div
+            className="flex justify-center space-x-8 mt-12 animate-fade-in-up"
+            style={{ animationDelay: "1s" }}
+          >
             <a
               href="https://github.com/Cyriloo7"
               target="_blank"

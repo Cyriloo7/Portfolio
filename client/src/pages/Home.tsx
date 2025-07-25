@@ -20,13 +20,14 @@ export default function Home() {
       <Achievements />
       <Certifications />
       <Contact />
-      
+
       {/* Footer */}
       <footer className="py-12 border-t border-white/10">
         <div className="container mx-auto px-6 text-center">
           <div className="glass rounded-3xl p-8 max-w-2xl mx-auto">
             <p className="text-gray-300 mb-4">
-              &copy; 2024 Cyril Jose. Crafted with passion for AI and beautiful design.
+              &copy; 2025 Cyril Jose. Crafted with passion for AI and beautiful
+              design.
             </p>
             <div className="flex justify-center space-x-6">
               <a
